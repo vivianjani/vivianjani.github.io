@@ -1,18 +1,24 @@
 #include <iostream>
+
 using namespace std;
+
 int main()
 {
-      int  i, j, n;
-      cout << "Masukkan jumlah baris:  ";
-      cin >> n;
-      for (i = n; i >= 1; i--)
-      {
-            for (j = 1; j <= i; j++)
-            {
-                  cout << "* ";
-            }
-            // ending line after each row
-            cout << "\n";
-      }
-      return 0;
+    cout << "## Program C++ Menentukan Ganjil-Genap##" << endl;
+    cout << "========================================" <<endl;
+    cout << endl;
+
+    int x;
+
+    cout << "Input sebuah bilangan bulat: ";
+    cin >> x;
+
+    if (x % 2 == 0) {
+        cout << x << "  adalah bilangan genap";
+    }
+    else {
+        cout << x << "  adalah bilangan ganjil";
+    }
+    cout <<endl;
+    return 0;
 }
