@@ -4,21 +4,14 @@ using namespace std;
 
 int main()
 {
-    cout << "## Program C++ Menentukan Ganjil-Genap##" << endl;
-    cout << "========================================" <<endl;
-    cout << endl;
+    float luas, phi=3.14;
+    int r;
 
-    int x;
+    cout << "Masukkan Jari-jari : ";
+    cin >> r;
 
-    cout << "Input sebuah bilangan bulat: ";
-    cin >> x;
+    luas = phi*r*r;
 
-    if (x % 2 == 0) {
-        cout << x << "  adalah bilangan genap";
-    }
-    else {
-        cout << x << "  adalah bilangan ganjil";
-    }
-    cout <<endl;
+    cout<<"Luas Lingkaran = "<<luas<< endl;
     return 0;
 }
