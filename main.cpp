@@ -2,51 +2,43 @@
 
 using namespace std;
 
-void quick(int arr[],int left, int right){
-
-    int i= left, j= right;
-    int tmp;
-    int pivot= arr[(left+right/2)];
-    while (i<j){
-        while (arr[i] < pivot)
-            i++;
-            while (arr[j]> pivot)
-            j--;
-
-    if(i<= j){
-        tmp = arr[i];
-        arr[i]= arr[j];
-        arr[j]= tmp;
-        i++;
-        j--;
-    };
-}
-if (left <j){
-        quick(arr,left,j);
-if (i< right){
-    quick(arr,i,right);
-}
-}
-}
 int main(){
-    int n, data[50];
 
-    cout<<"Masukkan Banyak Angka : ";
-    cin>>n;
+     // Deklarasi array tiga dimensi dengan nama "angka"
+     // Dengan jumlah ukuran pertama / subskrip pertama = 2
+     // Jumlah Ukuran kedua = 3 & jumlah ukuran ketiga = 4
+     int angka [2][3][4];
 
-    for (int a=0; a<n; a++){
-        cout<<"Masukkan Angka : ";
-        cin>>data[a];
-    }
-     cout<<"Data Sebelum diurutkan : ";
-        for (int a=0; a<n; a++){
-            cout<<data[a]<<" ";
+     // Mendeklarasi variabel untuk indeks perulangan
+     int i,j,k;
+
+     cout<<"\t===============================";
+     cout<<"\n\t== Contoh Array Tiga Dimensi ==\n";
+     cout<<"\t===============================\n\n";
+
+     // Mengisi nilai kedalam elemen-elemen array angka
+     cout<<"== Masukkan elemen-elemen array angka ==\n";
+     for(i=0;i<2;i++){
+          for(j=0;j<3;j++){
+               for(k=0;k<4;k++){
+                    cout<<"angka indeks ke ["<<i<<"]["<<j<<"]["<<k<<"]"<<" = ";
+                    cin>>angka[i][j][k];
+               }
+          }
+     }
+
+     cout<<"\n\n===============================\n";
+     cout<<"== Tampil nilai elemen Array ==\n";
+     cout<<"===============================\n";
+
+     //menampilkan nilai dari setiap elemen array angka
+     for(i=0;i<2;i++){
+        for(j=0;j<3;j++){
+           for(k=0;k<4;k++){
+              cout<<"angka indeks ke ["<<i<<"]["<<j<<"]["<<k<<"]"<<" = "<<angka[i][j][k]<<endl;
+           }
         }
-        quick(data,0,n);
-        cout<<"\n";
-        cout<<"Hasil Pengurutan : ";
-        for (int a=0; a<n; a++){
-            cout<<data[a]<<" ";
-        }
+     }
+
+     return 0;
 }
-
